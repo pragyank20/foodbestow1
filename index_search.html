@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="jigar sable, portfolio, jigar, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Jigar's Portfolio. Full-Stack Web Developer and Android App Developer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+    <title>FOODBESTOW</title>
+<style>
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-color: white;
+  
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  
+  
+  
+  font-size: 18px;
+  padding: 12px 20px 12px 40px;
+  border: 3px black;
+  margin-bottom: 7px;
+  margin-top: 71px;
+  
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 5px;
+  padding-left: 35px;
+  padding-right: 35px;
+  
+  
+  
+  margin: 0;
+}
+
+#myUL li a {
+ 
+  border: 3px solid black;
+  column-count: 6;
+  
+  
+  border-radius: 15px;
+  
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+ 
+  float: left;
+  height:210px;
+  width: 50%;
+  min-block-size: 250px;
+  margin-block-start: 10px;
+  
+  
+
+  text-align: center;;
+  text-decoration: none;
+  font-size: 18px;
+  
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: skyblue;
+}
+
+
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- navbar starts -->
+<header>
+  <a href="/" class="logo"><i class="fab fa-node-js"></i> Foodbestow</a>
+
+  <div id="menu" class="fas fa-bars"></div>
+  <nav class="navbar">
+      <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#skills">Partners NGO's</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a class="active"  href="index_search.html">Search NGO's</a></li>
+      <li><a href="#experience">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
+</header>
+<!-- navbar ends -->
+
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter city name" title="Type in a name">
+
+<ul id="myUL">
+  <li><a  style="background-image: url('img/img4.jpg');"href="jaipur.html">Jaipur</a></li>
+
+  <li><a style="background-image: url('img/img20.jpg');" href="mumbai.html">Mumbai</a></li>
+
+  <li><a style="background-image: url('img/img21.jpg');"href="newdelhi.html">New Delhi</a></li>
+
+  <li><a style="background-image: url('img/img22.jpg');" href="Surat.html">Surat</a></li>
+
+  <li><a style="background-image: url('img/img23.jpg');"href="Kolkata.html">Kolkata</a></li>
+  
+  <li><a style="background-image: url('img/img24.jpg');" href="udaipur.html">Udaipur</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+
+<!-- footer section starts -->
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>Food Bestow</h3>
+          <p>Thank you for visiting our Donation website. Connect with us over socials. <br/> <br/> Keep Doating . Connect with us over our live Events. </p>
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> Partners NGO's</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+          <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> Testimonials</a>
+      </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          <p> <i class="fas fa-phone"></i>+91 7240-203-187</p>
+          <p> <i class="fas fa-envelope"></i>foodbestow@gmail.com</p>
+          <p> <i class="fas fa-map-marked-alt"></i>Jaipur, India-302033</p>
+          <div class="share">
+
+              <a href="https://www.linkedin.com/in/food-bestow-207a08267/" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+              <a href="https://github.com/jigar-sable" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+              <a href="mailto:foodbestow@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+              <a href="https://twitter.com/foodbestow" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
+              <a href="https://t.me/lifecode5" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank"></a>
+          </div>
+      </div>
+  </div>
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/jigar-sable"> Our Team</a></h1>
+
+</section>
+<!-- footer section ends -->
+
+
+
+<!-- scroll top btn -->
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- particle.js links -->
+<script src="./assets/js/particles.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script src="./assets/js/script.js"></script>
+
+
+<!-- particle.js links -->
+<script src="./assets/js/particles.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+</body>
+</html>
